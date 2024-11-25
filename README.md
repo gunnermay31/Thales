@@ -12,7 +12,7 @@ The platform empowers airlines to manage their fleet effectively by providing en
 - **Airport-to-Airport Optimal Route Identification** (refer to the Health and Detection feature)
 - **Aircraft Airworthiness Assessment** (refer to the Damage Detection feature)
 - **Aircraft Wiring Fault Detection** (refer to the Damage Detection feature)
-- **Real-Time Damage Detection** via live CCTV feed integrated with YOLO models.
+- **Real-Time Damage Detection** (refer to the Damage Detection feature) via live CCTV feed integrated with YOLO models.
 
 ---
 
