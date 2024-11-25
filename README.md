@@ -206,6 +206,8 @@ This part of the project visualizes flight paths and provides a detailed dashboa
 ---
 
 ## **Video Demonstrations**
-1. **Shortest Path Detection**: [Watch here](https://drive.google.com/file/d/1BnRD0wx_UGHR1b_dem75wRMOJEiKv4yC/view?usp=sharing)
-2. **Account Management**: [Watch here](https://drive.google.com/file/d/1vprL9PT3DnytM9fLvxdxOduSVUP31Foi/view?usp=sharing)
+1. **Real-Time Damage Detection**: [Watch here](https://drive.google.com/file/d/14CRltw8-AeaxWN_gQfE6ZSmMS6zWOmgK/view?usp=sharing)
+2. **Shortest Path Detection**: [Watch here](https://drive.google.com/file/d/1BnRD0wx_UGHR1b_dem75wRMOJEiKv4yC/view?usp=sharing)
+3. **Account Management**: [Watch here](https://drive.google.com/file/d/1vprL9PT3DnytM9fLvxdxOduSVUP31Foi/view?usp=sharing)
+   
 
