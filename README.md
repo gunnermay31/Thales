@@ -1,7 +1,77 @@
 # Thales hackathon
 # Byte Busters
 
-This project is a web application which can be used in Aviation that helps in creating a secure account for the pilot by verifying the detils such as type of Liscense its Expirydate by cross referencing the database and the airline can manage there flight by fetching the details like where and how the fleet is performing, provides endpoints for various functionalities related to aircraft health and flight paths. It is built using FastAPI and serves as the backend for a dashboard application.
+This project is a web application which can be used in Aviation that helps in creating a secure account using JWT tokens OTP verification through mail of the pilot or admin (where admin can be airline operations head or fleet manager) for the pilot by verifying the detils such as type of Liscenseits Expirydate by cross referencing to the international database. 
+The airline can manage there flight by fetching the details like where and how the fleet is performing, provides endpoints for various functionalities related to Aircraft health (Refer to Health and detection Feature)
+Aircraft fuel consumption (Refer to Health and detection Feature)
+Optimal path followed by aircraft (Refer to Health and detection Feature)
+Optimal path can be even findout from one airport to another (Refer to Health and detection Feature)
+Aircrafts Airworthiness (Damage Detection)
+Aircrafts wiring fault (Damage Detection)
+Real time damage detection (live feed from CCTV camera can be fed to the yolo model)
+
+Feature 1:
+
+Damage Detection:
+installation:
+1. use split termial in vs code .
+2. bring the driectory to frontend and backend in each of the terminal.
+3. backend terminal type the following commands:
+   python -m venv venv (create the environment)
+   venv\Scripts\activate (activate the environment scripts)
+   pip install -r requirements.txt (install the libraries of python)
+   python app.py (to run the server)
+4. frontend terminal type the below commands:
+   npm i (install the node modules)
+   npm start (start the frontend)
+
+   caution make sure you run the server before the running the frontend.
+   
+Feature 2:
+
+health and path detection:
+installation:
+1. use split termial in vs code .
+2. bring the driectory to frontend and backend in each of the terminal.
+3. backend terminal type the following commands:
+   python -m venv venv (create the environment)
+   venv\Scripts\activate (activate the environment scripts)
+   pip install -r requirements.txt (install the libraries of python)
+   python app.py (to run the server)
+4. frontend terminal type the below commands:
+   npm i (install the node modules)
+   npm start (start the frontend)
+
+   caution make sure you run the server before the running the frontend.
+   Also check if the calls are going to backend by using postman.
+   eg:
+
+   http://0.0.0.0:8000/aircraft
+   body:
+   {
+  "flight_number": "AI840",
+  "aircraft_model": "A359"
+   }
+
+
+   http://0.0.0.0:8000/get_paths
+   body:
+   {
+  "src": [28.556555, 77.10079],
+  "des": [12.982267, 80.16378],
+  "on_air": false
+   }
+
+
+   Feature 3:
+   
+Damage Detection:
+installation: simply type npm i and npm run dev
+caution please make sure the env file is filled for both src and server.
+
+
+
+It is built using FastAPI and serves as the backend for a dashboard application.
 
 # Video Demonstration 
 https://drive.google.com/file/d/1BnRD0wx_UGHR1b_dem75wRMOJEiKv4yC/view?usp=sharing (shortest Path detection)
