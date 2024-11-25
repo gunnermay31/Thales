@@ -1,222 +1,173 @@
-# Thales hackathon
-# Byte Busters
+# **Thales Hackathon**
 
-This project is a web application which can be used in Aviation that helps in creating a secure account using JWT tokens OTP verification through mail of the pilot or admin (where admin can be airline operations head or fleet manager) for the pilot by verifying the detils such as type of Liscenseits Expirydate by cross referencing to the international database. 
-The airline can manage there flight by fetching the details like where and how the fleet is performing, provides endpoints for various functionalities related to Aircraft health (Refer to Health and detection Feature)
-Aircraft fuel consumption (Refer to Health and detection Feature)
-Optimal path followed by aircraft (Refer to Health and detection Feature)
-Optimal path can be even findout from one airport to another (Refer to Health and detection Feature)
-Aircrafts Airworthiness (Damage Detection)
-Aircrafts wiring fault (Damage Detection)
-Real time damage detection (live feed from CCTV camera can be fed to the yolo model)
+## **Byte Busters**
 
-Feature 1:
+This project is a comprehensive web application tailored for the aviation industry. It facilitates secure account creation for pilots and administrators (airline operations heads or fleet managers) using **JWT tokens** and **OTP verification via email**. The system verifies critical details such as pilot licenses and expiry dates by cross-referencing with an international database.
 
-Damage Detection:
-installation:
-1. use split termial in vs code .
-2. bring the driectory to frontend and backend in each of the terminal.
-3. backend terminal type the following commands:
-   python -m venv venv (create the environment)
-   venv\Scripts\activate (activate the environment scripts)
-   pip install -r requirements.txt (install the libraries of python)
-   python app.py (to run the server)
-4. frontend terminal type the below commands:
-   npm i (install the node modules)
-   npm start (start the frontend)
+The platform empowers airlines to manage their fleet effectively by providing endpoints and tools for:
 
-   caution make sure you run the server before the running the frontend.
-   
-Feature 2:
+- **Aircraft Health Monitoring** (refer to the Health and Detection feature)
+- **Aircraft Fuel Consumption Analysis** (refer to the Health and Detection feature)
+- **Optimal Path Detection** for flights (refer to the Health and Detection feature)
+- **Airport-to-Airport Optimal Route Identification** (refer to the Health and Detection feature)
+- **Aircraft Airworthiness Assessment** (refer to the Damage Detection feature)
+- **Aircraft Wiring Fault Detection** (refer to the Damage Detection feature)
+- **Real-Time Damage Detection** via live CCTV feed integrated with YOLO models.
 
-health and path detection:
-installation:
-1. use split termial in vs code .
-2. bring the driectory to frontend and backend in each of the terminal.
-3. backend terminal type the following commands:
-   python -m venv venv (create the environment)
-   venv\Scripts\activate (activate the environment scripts)
-   pip install -r requirements.txt (install the libraries of python)
-   python app.py (to run the server)
-4. frontend terminal type the below commands:
-   npm i (install the node modules)
-   npm start (start the frontend)
+---
 
-   caution make sure you run the server before the running the frontend.
-   Also check if the calls are going to backend by using postman.
-   eg:
+## **Features**
 
-   http://0.0.0.0:8000/aircraft
-   body:
-   {
-  "flight_number": "AI840",
-  "aircraft_model": "A359"
-   }
+### **Feature 1: Damage Detection**
 
+This feature identifies damage to aircraft systems, including structural and wiring issues. 
 
-   http://0.0.0.0:8000/get_paths
-   body:
-   {
-  "src": [28.556555, 77.10079],
-  "des": [12.982267, 80.16378],
-  "on_air": false
-   }
+#### **Installation**
 
+1. Use a split terminal in VS Code and navigate to both `frontend` and `backend` directories in separate terminals.
+2. **Backend Setup:**
+   - Create a virtual environment:
+     ```bash
+     python -m venv venv
+     ```
+   - Activate the virtual environment:
+     ```bash
+     venv\Scripts\activate  # For Windows
+     source venv/bin/activate  # For Linux/Mac
+     ```
+   - Install dependencies:
+     ```bash
+     pip install -r requirements.txt
+     ```
+   - Start the server:
+     ```bash
+     python app.py
+     ```
+3. **Frontend Setup:**
+   - Install dependencies:
+     ```bash
+     npm i
+     ```
+   - Start the frontend:
+     ```bash
+     npm start
+     ```
+4. Ensure the backend server is running before starting the frontend.
 
-   Feature 3:
-   
-Damage Detection:
-installation: simply type npm i and npm run dev
-caution please make sure the env file is filled for both src and server.
+---
 
+### **Feature 2: Health and Path Detection**
 
+This feature provides real-time insights into flight health and calculates optimal routes between airports.
 
-It is built using FastAPI and serves as the backend for a dashboard application.
+#### **Installation**
 
-# Video Demonstration 
-https://drive.google.com/file/d/1BnRD0wx_UGHR1b_dem75wRMOJEiKv4yC/view?usp=sharing (shortest Path detection)
-https://drive.google.com/file/d/1vprL9PT3DnytM9fLvxdxOduSVUP31Foi/view?usp=sharing (Account managment)
+Follow the same steps as **Feature 1** for both frontend and backend setup.
 
-# Backend for shortest Path detection.
-## Installation
+#### **API Endpoints**:
+Test the backend API using tools like **Postman**:
+- **Get Aircraft Details**:
+  - Endpoint: `http://0.0.0.0:8000/aircraft`
+  - Body:
+    ```json
+    {
+      "flight_number": "AI840",
+      "aircraft_model": "A359"
+    }
+    ```
+- **Get Optimal Paths**:
+  - Endpoint: `http://0.0.0.0:8000/get_paths`
+  - Body:
+    ```json
+    {
+      "src": [28.556555, 77.10079],
+      "des": [12.982267, 80.16378],
+      "on_air": false
+    }
+    ```
 
-1. Clone the repository: `git clone https://github.com/gunnermay31/Thales.git`
-2. Navigate to the project directory: `cd dashboard-project`
-3. Install dependencies: `pip install -r requirements.txt`
-   
-# Backend for shortest Path detection.
-## Installation
+---
 
-1. Clone the repository: `git clone https://github.com/gunnermay31/Thales.git`
-2. Navigate to the project directory: `cd dashboard-project`
-3. Install dependencies: `npm i`
+### **Feature 3: Real-Time Damage Detection**
 
-## Usage
+This feature integrates live CCTV feeds into YOLO-based models for real-time aircraft damage detection.
 
-1. Start the server: `uvicorn main:app --reload` or  `python -m api_code.app`
-2. The API will be running on `http://localhost:8000`
+#### **Installation**
+- Simply run:
+  ```bash
+  npm i
+  npm run dev
+  ```
+- Ensure `.env` files for both frontend and backend are correctly configured.
 
-## Endpoints
+---
 
-- `/health`: Returns a dictionary indicating the health of the application.
-- `/aircraft`: Endpoint to get information about an aircraft.
-- `/get_paths`: Endpoint to retrieve optimal routes from a source to a destination.
-- `/nearest_airport`: Endpoint to identify the nearest airport to a provided airplane's current position.
+## **Project Structure**
 
-## Understand the endpoints
-https://drive.google.com/file/d/1vIQNWAlIqkTXcRujP5Vcz8oooG5KDR8I/view?usp=sharing
+This project uses **FastAPI** for the backend and React with Leaflet for the frontend.
 
-## Dependencies
+### **Backend: Shortest Path Detection**
 
-- `fastapi`: FastAPI framework for building APIs.
-- `numpy`: Numerical computing library.
-- `uvicorn`: ASGI server for FastAPI.
-- `openap`: Library for calculating aircraft emissions.
-- `traffic`: Library for working with airport data.
-- `json`: Library for working with JSON data.
-
-## Code Structure
-
-- `main.py`: Entry point for the application.
-- `api_code/algorithms/`: Implementation of a graph data structure and path algorithm.
--  `api_code/utils/`: Implementation of all util helpers.
-
-# Frontend
-This project visualizes flight paths on a map using React and Leaflet. It fetches real-time flight data, displays it on the map, and provides an optimal path for the selected flight. Additionally, it includes a comprehensive Health Dashboard to monitor the status and health of specific flights.
-
-## Features
-
-- **Real-time Flight Data Visualization**: Displays domestic and international flights on a map with distinct icons.
-- **Flight Details**: View details such as flight ID, number, altitude, velocity, aircraft model, departure, and arrival airports.
-- **Optimal Path Calculation**: Calculate and display the optimal path for a selected flight.
-- **Health Dashboard**: A separate dashboard to view the health status of different flights, including maintenance history, emissions data, and nearby assistance information.
-
-## Installation
-
-### Prerequisites
-
-Ensure you have the following installed on your system:
-- Node.js (v12 or later)
-- npm (v6 or later)
-
-### Steps
-
+#### **Installation**
 1. Clone the repository:
-
-2. Install dependencies:
-   ```sh
-   npm install
+   ```bash
+   git clone https://github.com/gunnermay31/Thales.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd health-and-path-detection/backend
+   ```
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
    ```
 
-3. Start the development server:
-   ```sh
+#### **Usage**
+- Start the server:
+  ```bash
+  uvicorn main:app --reload
+  ```
+- The API will run on `http://localhost:8000`.
+
+#### **Endpoints**
+- `/health`: Check API health.
+- `/aircraft`: Retrieve aircraft information.
+- `/get_paths`: Calculate optimal routes.
+- `/nearest_airport`: Identify the nearest airport based on coordinates.
+
+---
+
+### **Frontend: Real-Time Visualization and Health Dashboard**
+
+This part of the project visualizes flight paths and provides a detailed dashboard for monitoring aircraft health.
+
+#### **Features**
+- **Flight Path Visualization**: Real-time domestic and international flight data with optimized routes.
+- **Health Dashboard**: Comprehensive details on emissions, maintenance history, and aircraft status.
+- **Interactive Map**: Click on markers for flight details and route calculations.
+
+#### **Installation**
+1. Navigate to the `frontend` directory.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the application:
+   ```bash
    npm start
    ```
 
-This will launch the application and open it in your default browser at `http://localhost:3000`.
+#### **Usage**
+1. View domestic and international flights on the map with different markers.
+2. Click a marker to see flight details.
+3. Calculate optimal paths and monitor aircraft health via the dashboard.
 
-## Usage
+---
 
-### Viewing Flights
+## **Example API Requests**
 
-1. **View Domestic and International Flights**:
-   - Domestic flights are marked with a specific icon.
-   - International flights have a different icon.
-   - Click on any flight marker to see flight details in a popup.
-
-2. **Finding Optimal Path**:
-   - In the popup, click the "Find Optimal Path" button.
-   - A loading spinner will indicate the processing of the request.
-   - Once the optimal path is fetched, it will be displayed on the map.
-
-3. **Searched Flight**:
-   - If you search for a specific flight, its details and position will be highlighted on the map.
-   - You can also find the optimal path for a searched flight if it's a domestic flight.
-
-### Health Dashboard
-
-1. **Navigate to Health Dashboard**:
-   - Go to the Health Dashboard page from the main navigation menu.
-
-2. **Search for Flight Health Information**:
-   - Enter a flight number in the search input and press Enter.
-   - The dashboard will display the health status and other relevant details of the flight.
-
-3. **Flight Health Information**:
-   - The Health Dashboard provides information such as:
-     - The dashboard also provides details about the nearest airport to the flight's current position, including the airport's name, latitude, longitude, elevation, GPS code, IATA code, city, and website link.   
-     - Detailed emissions data for the flight, including CO2, H2O, SOx, and NOx emissions, is displayed along with corresponding graphs.
-     - The maintenance history of the flight is displayed in a table, showing past maintenance events and their details.
-
-
-### Example Usage of Health Dashboard
-
-- Go to the Health Dashboard page from the main navigation menu.
-- Enter a flight number (e.g., "AA123") in the search input and press Enter.
-- The dashboard will display the health status and other relevant details of the flight.
-
-
-
-## Code Overview
-
-### Main Components
-
-- **MapComponent.jsx**:
-  - Handles the rendering of the map using `react-leaflet`.
-  - Displays flight markers and paths.
-  - Fetches and displays the optimal path for selected flights.
-
-- **HealthDashboard.js**:
-  - Manages the state and rendering of the Health Dashboard.
-  - Fetches health data for a specific flight and displays it.
-  - Displays information such as emissions data, nearby assistance, and maintenance history.
-
-- **App.js**:
-  - Main application component that integrates `MapComponent`, `HealthDashboard`, and manages state.
-
-
-### Example Request for Optimal Path
-
+### **Optimal Path**
+**Request**:
 ```json
 {
   "src": [latitude, longitude],
@@ -225,8 +176,7 @@ This will launch the application and open it in your default browser at `http://
 }
 ```
 
-### Example Response for Optimal Path
-
+**Response**:
 ```json
 {
   "fly_status": "Can Fly",
@@ -237,15 +187,25 @@ This will launch the application and open it in your default browser at `http://
 }
 ```
 
-## Dependencies
+---
 
-- React
-- Leaflet
-- Axios
-- react-icons
+## **Dependencies**
 
+### **Backend**
+- **FastAPI**: API framework
+- **Uvicorn**: ASGI server
+- **NumPy**: Numerical operations
+- **Traffic**: Aviation data
+- **OpenAP**: Aircraft property management
 
-## Understand the UI
-https://drive.google.com/file/d/1BnRD0wx_UGHR1b_dem75wRMOJEiKv4yC/view?usp=sharing (shortest Path detection)
-https://drive.google.com/file/d/1vprL9PT3DnytM9fLvxdxOduSVUP31Foi/view?usp=sharing (Account managment)
+### **Frontend**
+- **React**: UI framework
+- **Leaflet**: Map rendering
+- **Axios**: HTTP requests
+
+---
+
+## **Video Demonstrations**
+1. **Shortest Path Detection**: [Watch here](https://drive.google.com/file/d/1BnRD0wx_UGHR1b_dem75wRMOJEiKv4yC/view?usp=sharing)
+2. **Account Management**: [Watch here](https://drive.google.com/file/d/1vprL9PT3DnytM9fLvxdxOduSVUP31Foi/view?usp=sharing)
 
