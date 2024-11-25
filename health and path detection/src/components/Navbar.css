@@ -1,0 +1,59 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0a1327; /* Cockpit-like dark navy */
+    color: #e0eafc; /* Soft white/blue text */
+    padding: 15px 30px;
+    border-bottom: 2px solid #2563eb; /* Highlighting strip resembling aircraft dashboards */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif; /* Futuristic font for avionics feel */
+    color: #e0eafc; /* Brand text color */
+    text-shadow: 1px 1px 4px #1d4ed8; /* Glow effect */
+}
+
+.navbar-links a {
+    margin: 0 15px;
+    color: #64ffda; /* Bright green, mimicking aircraft HUDs */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    border-bottom: 2px solid transparent; /* Underline animation effect */
+}
+
+.navbar-links a:hover {
+    color: #40c9a2; /* Slightly lighter green on hover */
+    border-bottom: 2px solid #64ffda; /* Underline effect like cockpit indicators */
+    transform: scale(1.1); /* Subtle zoom on hover */
+}
+
+.navbar-links a:active {
+    color: #2563eb; /* Electric blue when active */
+}
+
+.navbar-links a:focus {
+    outline: none;
+    border-bottom: 2px solid #2563eb; /* Similar to focus indicators in aircraft systems */
+}
+
+.navbar {
+    animation: fadeIn 1.5s ease-in-out; /* Smooth appearance animation */
+}
+
+/* Keyframe animation for a smooth fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
